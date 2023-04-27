@@ -9,9 +9,9 @@ import * as yup from "yup";
 const Form = () => {
 	const schema = yup.object().shape({
 		fullName: yup.string().required("Your full name is required!"),
-		email: yup.string().email().required(),
+		email: yup.string().email().required("Your email is required!"),
 		subject: yup.string(),
-		message: yup.string().required(),
+		message: yup.string().required("Message is required!"),
 	});
 
 	const [successMsg, setSuccessMsg] = useState("");
