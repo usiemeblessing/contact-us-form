@@ -7,13 +7,14 @@
 }
 
 body {
-	background: rgb(10, 124, 145);
+	height: 100vh;
+	color: #555;
 }
 
 form {
 	background-color: rgb(58, 67, 102);
 	max-width: 40rem;
-	margin: 100px auto;
+	margin: 35px auto;
 	padding: 30px;
 	text-align: center;
 	border-radius: 8px;
@@ -25,15 +26,19 @@ h1 {
 
 input {
 	width: 80%;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	padding: 10px;
 	border-radius: 8px;
+	font-size: 18px;
 }
 
 .text-area {
 	width: 80%;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	border-radius: 8px;
+	font-size: 18px;
+	padding: 10px;
+	margin-top: 10px;
 }
 
 .submit {
