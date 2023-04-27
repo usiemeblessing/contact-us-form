@@ -26,7 +26,7 @@ const Form = () => {
 	});
 
 	const onSubmit = () => {
-		setSuccessMsg("User submission is successful!.");
+		setSuccessMsg("Your submission is successful!.");
 		reset();
 	};
 
