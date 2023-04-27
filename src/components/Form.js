@@ -15,12 +15,7 @@ const Form = () => {
 	});
 
 	const [successMsg, setSuccessMsg] = useState("");
-	// const [post, setPost] = useState({
-	// 	name: "",
-	// 	email: "",
-	// 	subject: "",
-	// 	message:
-	// });
+
 	const {
 		register,
 		handleSubmit,
@@ -34,10 +29,6 @@ const Form = () => {
 		setSuccessMsg("User submission is successful!.");
 		reset();
 	};
-
-	// const handleInput = (event) => {
-
-	// }
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
