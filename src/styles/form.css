@@ -1,0 +1,48 @@
+/** @format */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: rgb(10, 124, 145);
+}
+
+form {
+	background-color: rgb(58, 67, 102);
+	max-width: 40rem;
+	margin: 100px auto;
+	padding: 30px;
+	text-align: center;
+	border-radius: 8px;
+}
+h1 {
+	color: white;
+	padding-bottom: 20px;
+}
+
+input {
+	width: 80%;
+	margin-bottom: 20px;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+.text-area {
+	width: 80%;
+	margin-bottom: 20px;
+	border-radius: 8px;
+}
+
+.submit {
+	background-color: yellow;
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+p {
+	color: red;
+}
