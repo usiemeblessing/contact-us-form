@@ -48,6 +48,11 @@ input {
 	font-weight: 600;
 }
 
-p {
+.error-msg {
 	color: red;
+}
+
+.success-msg {
+	color: white;
+	margin-bottom: 20px;
 }

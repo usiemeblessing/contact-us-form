@@ -1,6 +1,7 @@
 /** @format */
 
 import React from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -13,32 +14,48 @@ const Form = () => {
 		message: yup.string().required(),
 	});
 
+	const [successMsg, setSuccessMsg] = useState("");
+	// const [post, setPost] = useState({
+	// 	name: "",
+	// 	email: "",
+	// 	subject: "",
+	// 	message:
+	// });
 	const {
 		register,
 		handleSubmit,
+		reset,
 		formState: { errors },
 	} = useForm({
 		resolver: yupResolver(schema),
 	});
 
-	const onSubmit = () => {};
+	const onSubmit = () => {
+		setSuccessMsg("User submission is successful!.");
+		reset();
+	};
+
+	// const handleInput = (event) => {
+
+	// }
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
+			{successMsg && <p className="success-msg">{successMsg}</p>}
 			<h1>Contact Us</h1>
 			<input
 				type="text"
 				placeholder="Full Name"
 				{...register("fullName")}
 			></input>
-			<p>{errors.fullName?.message}</p>
+			<p className="error-msg">{errors.fullName?.message}</p>
 			<br></br>
 			<input
 				type="email"
 				placeholder="Email"
 				{...register("email")}
 			></input>
-			<p>{errors.email?.message}</p>
+			<p className="error-msg">{errors.email?.message}</p>
 			<br></br>
 			<input
 				type="text"
@@ -54,7 +71,7 @@ const Form = () => {
 				placeholder="Message"
 				{...register("message")}
 			></textarea>
-			<p>{errors.message?.message}</p>
+			<p className="error-msg">{errors.message?.message}</p>
 			<input type="submit" className="submit"></input>
 		</form>
 	);

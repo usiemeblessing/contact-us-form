@@ -24,3 +24,8 @@ form should have the following fields
 ### Components
 
 -   Form.js
+
+#### Libraries
+
+-   React Hook Form: to hanlde functionalities related to displaying errors and submission of the form
+-   Yup : for validation
