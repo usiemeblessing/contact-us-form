@@ -26,7 +26,7 @@ h1 {
 
 input {
 	width: 80%;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	padding: 10px;
 	border-radius: 8px;
 	font-size: 18px;
@@ -58,7 +58,7 @@ input {
 
 .error-msg-message,
 .error-msg-email {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .success-msg {
