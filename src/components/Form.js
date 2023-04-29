@@ -39,6 +39,7 @@ const Form = () => {
 				<h1>Contact Us</h1>
 				<input
 					type="text"
+					name="fullName"
 					placeholder="Full Name"
 					{...register("fullName")}
 				></input>
@@ -46,18 +47,17 @@ const Form = () => {
 				<br></br>
 				<input
 					type="email"
+					name="email"
 					placeholder="Email"
 					{...register("email")}
 				></input>
 				<p className="error-msg">{errors.email?.message}</p>
-				<br></br>
 				<input
 					type="text"
+					name="subject"
 					placeholder="Subject"
 					{...register("subject")}
 				></input>
-
-				<br></br>
 				<textarea
 					className="text-area"
 					rows="4"
