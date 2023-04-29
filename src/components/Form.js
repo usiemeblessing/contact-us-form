@@ -31,40 +31,46 @@ const Form = () => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
-			{successMsg && <p className="success-msg">{successMsg}</p>}
-			<h1>Contact Us</h1>
-			<input
-				type="text"
-				placeholder="Full Name"
-				{...register("fullName")}
-			></input>
-			<p className="error-msg">{errors.fullName?.message}</p>
-			<br></br>
-			<input
-				type="email"
-				placeholder="Email"
-				{...register("email")}
-			></input>
-			<p className="error-msg">{errors.email?.message}</p>
-			<br></br>
-			<input
-				type="text"
-				placeholder="Subject"
-				{...register("subject")}
-			></input>
+		<>
+			<div>
+				{successMsg && <p className="success-msg">{successMsg}</p>}
+			</div>
+			<form onSubmit={handleSubmit(onSubmit)}>
+				<h1>Contact Us</h1>
+				<input
+					type="text"
+					placeholder="Full Name"
+					{...register("fullName")}
+				></input>
+				<p className="error-msg">{errors.fullName?.message}</p>
+				<br></br>
+				<input
+					type="email"
+					placeholder="Email"
+					{...register("email")}
+				></input>
+				<p className="error-msg">{errors.email?.message}</p>
+				<br></br>
+				<input
+					type="text"
+					placeholder="Subject"
+					{...register("subject")}
+				></input>
 
-			<br></br>
-			<textarea
-				className="text-area"
-				rows="4"
-				cols="50"
-				placeholder="Message"
-				{...register("message")}
-			></textarea>
-			<p className="error-msg">{errors.message?.message}</p>
-			<input type="submit" className="submit"></input>
-		</form>
+				<br></br>
+				<textarea
+					className="text-area"
+					rows="4"
+					cols="50"
+					placeholder="Message"
+					{...register("message")}
+				></textarea>
+				<p className="error-msg error-msg-message">
+					{errors.message?.message}
+				</p>
+				<button className="submit">Submit</button>
+			</form>
+		</>
 	);
 };
 export default Form;
