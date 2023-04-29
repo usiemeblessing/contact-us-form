@@ -51,7 +51,9 @@ const Form = () => {
 					placeholder="Email"
 					{...register("email")}
 				></input>
-				<p className="error-msg">{errors.email?.message}</p>
+				<p className="error-msg error-msg-email">
+					{errors.email?.message}
+				</p>
 				<input
 					type="text"
 					name="subject"

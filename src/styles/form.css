@@ -26,7 +26,7 @@ h1 {
 
 input {
 	width: 80%;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	padding: 10px;
 	border-radius: 8px;
 	font-size: 18px;
@@ -56,8 +56,9 @@ input {
 	color: red;
 }
 
-.error-msg-message {
-	margin-bottom: 10px;
+.error-msg-message,
+.error-msg-email {
+	margin-bottom: 20px;
 }
 
 .success-msg {
